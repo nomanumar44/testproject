@@ -39,7 +39,7 @@ class PostController extends Controller
 
     public function updatepost(Request $request , $id)
     {
-        $data = $request->only('title','body','image');
+
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body  = $request->input('body');
